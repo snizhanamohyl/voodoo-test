@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VooDoo Test</title>
+    <link rel="icon" type="image/svg+xml" href="./public/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,10 +15,15 @@
     <div class="bg-secondary">
       {{> header }}
       <main>
+        <div class="w-[342px] py-12 2xl:w-[1272px] mx-auto">
         {{> card-list }}
+        </div>
+
       </main>
     </div>
-
+    <div class="w-[342px] 2xl:w-[1272px] mx-auto">
+      {{> footer }}
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

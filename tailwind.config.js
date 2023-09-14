@@ -35,6 +35,10 @@ export default {
     //   small: "4px",
     //   full: "50%",
     // },
+    fontWeight: {
+      medium: "500",
+      bold: "700",
+    },
   },
   plugins: [],
 };

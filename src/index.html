@@ -37,8 +37,19 @@
           </div>
         </header>
         <main>
-          <ul id="card-list"
-            class="w-[390px] px-6 py-12 mx-auto flex flex-col items-center gap-12 pt-[50px] pb-[59px] 2xl:w-[1512px] 2xl:flex-wrap 2xl:justify-start 2xl:px-[120px] 2xl:flex-row 2xl:gap-x-6 2xl:gap-y-12"></ul>
+          <div class="w-[390px] px-6 pt-12 pb-[204px] mx-auto 2xl:w-[1512px] 2xl:px-[120px] 2xl:pb-[196px] 2xl:pt-[100px]">
+            <ul id="card-list"
+              class="mb-[59px] flex flex-col items-center gap-12 2xl:flex-wrap 2xl:justify-start 2xl:flex-row 2xl:gap-x-6 2xl:gap-y-12 2xl:mb=[70px]">
+            </ul>
+            <ul id="pagination" class="pointer-events-none flex gap-2.5 mx-auto justify-center">
+              <li><button data-page='1'
+                  class="font-inter w-10 h-10 rounded-full border border-primary flex items-center justify-center transition-colors hover:bg-primary hover:text-secondary">1</button>
+              </li>
+              <li><button data-page='2'
+                  class="w-10 font-inter h-10 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-secondary">2</button>
+              </li>
+            </ul>
+          </div>
         </main>
       </div>
       <footer

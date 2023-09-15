@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ["Space Grotesk", "sans-serif"],
         spaceMono: ["Space Mono", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
     colors: {

@@ -12,16 +12,13 @@
       rel="stylesheet">
   </head>
   <body class="text-sm">
-    <div class="bg-secondary">
-      {{> header }}
-      <main>
-        <div class="w-[342px] py-12 2xl:w-[1272px] mx-auto">
-        {{> card-list }}
-        </div>
-
-      </main>
-    </div>
-    <div class="w-[342px] 2xl:w-[1272px] mx-auto">
+    <div class="flex flex-col justify-between min-h-screen">
+      <div class="bg-secondary grow border-b border-primary">
+        {{> header }}
+        <main>
+            {{> card-list }}
+        </main>
+      </div>
       {{> footer }}
     </div>
     <script type="module" src="/main.js"></script>

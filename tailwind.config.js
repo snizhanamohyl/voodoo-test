@@ -13,6 +13,8 @@ export default {
       primary: "#000000",
       secondary: "#FCF7E6",
       tertiary: "#FFFFFF",
+      bgModal: "#1E1E1E",
+      modalHover: "#bfb9a3",
     },
     screens: {
       sm: "390px",

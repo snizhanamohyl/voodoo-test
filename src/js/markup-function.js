@@ -11,7 +11,7 @@ export const createProductListMarkup = (products) => {
     const cardMarkup = `<li class="relative transition-transform hover:scale-[102%] w-[342px] 2xl:w-[300px]">
                 <a href="#">
                 <img class="mb-3 w-[342px] h-[300px] object-cover rounded border 2xl:w-[300px]"
-                    src="${image}" alt="image">
+                    src="${image}" alt="${title}">
                 <div class="flex justify-between mb-3">
                     <div class="font-bold flex flex-col justify-between">
                         <p class="first-letter:capitalize ">${title}</p>

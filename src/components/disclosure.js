@@ -2,7 +2,7 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     <style>
-        @import url(/style.css);
+        @import url(./style.css);
     </style>
     <div data-disclosure class="rounded overflow-hidden">
         <div class="flex items-center justify-between p-6 gap-6 bg-primary text-secondary">

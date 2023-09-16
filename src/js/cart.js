@@ -114,7 +114,7 @@ const createCartItemMarkup = ({ id, title, img, price, quantity }) => {
           </div>
           <button class="delete-product transition-colors flex items-start hover:text-modalHover focus:text-modalHover">
             <svg width="24" height="24" fill="currentColor">
-              <use href="../images/sprite.svg#icon-trash-bin"></use>
+              <use href="./images/sprite.svg#icon-trash-bin"></use>
             </svg>
           </button>
         </li>

@@ -1,5 +1,6 @@
 const productListEl = document.getElementById("card-list");
 const cartListEl = document.getElementById("cart-list");
+const emptyCartMsgEl = document.getElementById("empty-cart-msg");
 
 const changeQuatityTypes = {
   INCREASE: "INCREASE",
@@ -95,7 +96,7 @@ const changeQuatity = (e, type) => {
 
 const createCartItemMarkup = ({ id, title, img, price, quantity }) => {
   return `<li data-id="${id}" class="flex gap-[18px]">
-          <img class="w-[74px] h-[74px] border border-secondary bg-secondary object-cover rounded-sm" width="74" height="74" src="${img}" alt="${title}">
+          <img class="shrink-0 w-[74px] h-[74px] border border-secondary bg-secondary object-cover rounded-sm" width="74" height="74" src="${img}" alt="${title}">
           <div class="flex flex-col self-stretch justify-between grow">
             <p>${title}</p>
             <p>${price} KR.</p>
@@ -144,6 +145,12 @@ const addListenersToChangeQuantityBtns = () => {
 
 const renderCartItems = () => {
   const productsInCart = getProductsFromLS();
+
+  if (productsInCart.length === 0) {
+    emptyCartMsgEl.classList.remove("hidden");
+  } else {
+    emptyCartMsgEl.classList.add("hidden");
+  }
 
   const markup = productsInCart.reduce((acc, product) => {
     return (acc += createCartItemMarkup(product));

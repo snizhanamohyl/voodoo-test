@@ -14,5 +14,3 @@ export const renderList = async (page) => {
 
   paginationEl.classList.remove("pointer-events-none");
 };
-
-renderList();

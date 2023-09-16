@@ -12,6 +12,18 @@ let currentPage = 1;
 
 const gapPaginationBtnMarkup = `<li class="w-10 font-inter h-10 rounded-full border border-primary flex items-center justify-center">...</li>`;
 
+const getCurrentPageFromLS = () => {
+  const storedCurrentPage = localStorage.getItem("currentPage")
+    ? Number(localStorage.getItem("currentPage"))
+    : 1;
+
+  currentPage = storedCurrentPage;
+};
+
+const setCurrentPageToLS = (page) => {
+  localStorage.setItem("currentPage", page);
+};
+
 const createBtnMarkup = (pageNamber) => {
   return `<li>
         <button data-page="${pageNamber}" class="${
@@ -73,6 +85,9 @@ const onClick = async (e) => {
   if (page === currentPage) return;
 
   currentPage = page;
+  setCurrentPageToLS(page);
+
+  scrollTo({ top: 0, behavior: "smooth" });
 
   renderList(currentPage);
   createPaginationMarkup();
@@ -80,4 +95,6 @@ const onClick = async (e) => {
 
 paginationEl.addEventListener("click", onClick);
 
+getCurrentPageFromLS();
+renderList(currentPage);
 createPaginationMarkup();

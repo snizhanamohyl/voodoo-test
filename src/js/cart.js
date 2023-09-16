@@ -1,6 +1,7 @@
 const productListEl = document.getElementById("card-list");
 const cartListEl = document.getElementById("cart-list");
 const emptyCartMsgEl = document.getElementById("empty-cart-msg");
+const cartNumberEl = document.getElementById("cart-number");
 
 const changeQuatityTypes = {
   INCREASE: "INCREASE",
@@ -157,6 +158,13 @@ const renderCartItems = () => {
   }, "");
 
   cartListEl.innerHTML = markup;
+
+  if (productsInCart.length) {
+    cartNumberEl.classList.remove("hidden");
+    cartNumberEl.innerText = productsInCart.length;
+  } else {
+    cartNumberEl.classList.add("hidden");
+  }
   addListenerToDeleteBtns();
   addListenersToChangeQuantityBtns();
 };

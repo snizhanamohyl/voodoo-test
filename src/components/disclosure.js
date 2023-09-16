@@ -8,14 +8,14 @@ template.innerHTML = `
         <div class="flex items-center justify-between p-6 gap-6 bg-primary text-secondary">
             <div class="flex gap-1.5 items-center">
                 <svg width="24" height="24" stroke="currentColor">
-                    <use href="../images/sprite.svg#icon-alert-circle"></use>
+                    <use href="images/sprite.svg#icon-alert-circle"></use>
                 </svg>
                 <p class="uppercase text-base font-bold mr-6 2xl:mr-12">Alpha</p>
                 <slot name="msg" class="font-medium">Important info</slot>
             </div>
             <button data-toggle class="transition-colors hover:text-modalHover focus-visible:text-modalHover" >
                 <svg class="transition-transform duration-300" width="24" height="24" stroke="currentColor">
-                    <use href="./images/sprite.svg#icon-chevron-down"></use>
+                    <use href="/images/sprite.svg#icon-chevron-down"></use>
                 </svg>
             </button>
         </div>

@@ -2,13 +2,13 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     <style>
-        @import url(./style.css);
+        @import url(style.css);
     </style>
     <div data-disclosure class="rounded overflow-hidden">
         <div class="flex items-center justify-between p-6 gap-6 bg-primary text-secondary">
             <div class="flex gap-1.5 items-center">
                 <svg width="24" height="24" stroke="currentColor">
-                    <use href="./images/sprite.svg#icon-alert-circle"></use>
+                    <use href="images/sprite.svg#icon-alert-circle"></use>
                 </svg>
                 <p class="uppercase text-base font-bold mr-6 2xl:mr-12">Alpha</p>
                 <slot name="msg" class="font-medium">Important info</slot>
